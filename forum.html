@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Community Core Forum">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum | Community Core</title>
+    <script src="https://kit.fontawesome.com/f6ac416315.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      .discussion-content {
+        display: none; /* Hide content initially */
+        margin-top: 20px;
+      }
+      .discussion-card-body {
+        position: relative;
+      }
+      .discussion-content img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <script>
+      function toggleDiscussion(discussionId) {
+        const selectedDiscussion = document.getElementById(discussionId);
+        if (selectedDiscussion.style.display === 'none' || selectedDiscussion.style.display === '') {
+          selectedDiscussion.style.display = 'block';
+        } else {
+          selectedDiscussion.style.display = 'none';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.jpg" alt="Community Logo"> <strong>Community Core</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="forum.html" class="nav-link active">Forum</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Forum Page Content -->
+    <section id="forum-content" class="container py-5">
+      <h1 class="text-center">Community Forum</h1>
+      <p class="text-center">Engage in meaningful discussions, share knowledge, and connect with others.</p>
+
+      <!-- Forum Categories -->
+      <div class="row">
+        <!-- Forum Category 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">General Discussion</h4>
+            </div>
+            <div class="card-body discussion-card-body">
+              <p>Talk about anything and everything! Share ideas, experiences, or just chat with the community.</p>
+              <button onclick="toggleDiscussion('discussion1')" class="btn btn-primary">Join Discussion</button>
+              <!-- Discussion Content - Hidden initially inside the card -->
+              <div class="discussion-content" id="discussion1">
+                <h5>Sara Duterte denies threatening Marcoses, Romualdez</h5>
+                <img src="images/sara.avif" alt="AI Image">
+                <p>VICE President Sara Duterte clarified on Saturday, November 23, 2024, her statement regarding her instruction to have President Ferdinand Marcos Jr.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forum Category 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Disaster</h4>
+            </div>
+            <div class="card-body discussion-card-body">
+              <p>The 1103rd Infantry Brigade (1103Bde) successfully conducts an inter-agency humanitarian assistance.</p>
+              <button onclick="toggleDiscussion('discussion2')" class="btn btn-primary">Join Discussion</button>
+              <!-- Discussion Content - Hidden initially inside the card -->
+              <div class="discussion-content" id="discussion2">
+                <h5>The 1103rd Infantry Brigade (1103Bde) successfully conducts an inter-agency</h5>
+                <img src="images/disaster.avif" alt="Remote Work">
+                <p>THE 1103rd Infantry Brigade (1103Bde) has successfully conducted an inter-agency humanitarian assistance and disaster response simulation exercise strengthening coordination and readiness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forum Category 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Health & Lifestyle</h4>
+            </div>
+            <div class="card-body discussion-card-body">
+              <p>Discuss health tips, fitness routines, and wellness practices with like-minded individuals.</p>
+              <button onclick="toggleDiscussion('discussion3')" class="btn btn-primary">Join Discussion</button>
+              <!-- Discussion Content - Hidden initially inside the card -->
+              <div class="discussion-content" id="discussion3">
+                <h5>DOH launches 'big' catch-up immunization in NCR</h5>
+                <img src="images/baby.jpg" alt="Mental Health">
+                <p>The Department of Health on Tuesday launched a catch-up vaccination drive to increase the fully-immunized children (FIC) coverage in the National Capital Region (NCR).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-center text-white py-3">
+      <div>
+        <a class="mx-2 foot-icon" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="mx-2 foot-icon" href="#"><i class="fab fa-linkedin"></i></a>
+        <a class="mx-2 foot-icon" href="#"><i class="fab fa-telegram"></i></a>
+        <a class="mx-2 foot-icon" href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="mt-3"><strong>Community Core</strong> &copy; 2024</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
